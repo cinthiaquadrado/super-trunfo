@@ -59,14 +59,13 @@ function exibirOpcoes() {
 };
 
 function obtemAtributoSelecionado() {
-	var radioAtributos = document.getElementById("atributo");
-
-	for (var i = 0; i < radioAtributos.length; i++) {
-		if (radioAtributos[i].checked == true) {
-			return radioAtributos[i].value;
-		}
-	}
-};
+    var radioAtributos = document.getElementsByName("atributo");
+    for (i = 0; i < radioAtributos.length; i++){
+        if (radioAtributos[i].checked) {
+            return radioAtributos[i].value;
+        }
+    }
+}
 
 function jogar() {
 	var atributoSelecionado = obtemAtributoSelecionado();
